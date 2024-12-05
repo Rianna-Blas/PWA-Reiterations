@@ -1,3 +1,12 @@
-
-
+#Importing flask into the code
+from flask import Flask
+#Imports views variable
+from views import views
+#Creating Flask app and initialising it
+app = Flask(__name__)
+#Registers view.py into the Flask app
+app.register_blueprint(views, url_prefix = "/views") 
+#Running Flask and deciding which ports it should run on
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
 
