@@ -1,14 +1,16 @@
-{% extends "base.html"}
+{% extends "base.html" %}
 
 {% block content %}
+
+<!-- Introduction message into the PWA-->
 
 <div class="container">
 
     <p>Hello. This is the Movie/Game Reviewer For Dummies! Review a movie you have watched or a game you have played. Like it or hate it, we don't care :D. Just go to this site:</p>
 
-    <a href="https://MovieGameReviwerForDummies/">MovieGameReviwerForDummies</a> 
+    <a href="https://MovieGameReviewerForDummies/">MovieGameReviwerForDummies</a> 
 
-{% if session['username']}
+{% if session['username'] %}
     <br>
     <p>Hello {{ session['username'] }}</p>
 
@@ -16,7 +18,7 @@
     <a href="/add"><button>Add Review</button></a>
 
 {% endif %}
-
+<!--Template for for a movie/game review-->
 </div>
 
 <br>
@@ -31,13 +33,14 @@
     </thead>
 
     <tbody>
-       
+       {% for Review in Reviews %}
         <tr>
-            <td>{{ review['date'] }}</td>
-            <td>{{ review['username'] }}</td>
-            <td>{{ review['game or movie'] }}</td>
-            <td>{{ review['review'] }}</td>
+            <td>{{ Review['date'] }}</td>
+            <td>{{ Review['username'] }}</td>
+            <td>{{ Review['game or movie'] }}</td>
+            <td>{{ Review['review'] }}</td>
         </tr>
+        {% endfor %}
         
     </tbody>
 

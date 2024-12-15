@@ -1,14 +1,16 @@
 #importing needed materials from flask module in order to create routes and the website itself
 from flask import Flask, render_template, request, session, redirect
+import sqlite3
 import db
 
+#Creates the Flask app
 app = Flask(__name__)
-app.secret_key = "rookie"
+app.secret_key = "rv"
 #Route to Home Page
 @app.route("/")
 def Home():
     reviewData = db.GetAllReviews()
-    return render_template("index.html", reviews=reviewData)
+    return render_template("index.html", Reviewseview = reviewData)
 #Route to Login Page 
 @app.route("/login", methods=["GET", "POST"])
 def Login():
@@ -55,13 +57,12 @@ def Add():
     if request.method == "POST":
         user_id = session['id']
         date = request.form['date']
-        moviegame = request.form['game']
+        moviegame = request.form['moviegame']
         score = request.form['score']
 
         db.AddReview(user_id, date, moviegame, score)
 
     return render_template("add.html")
         
-
-
-app.run(debug=True, port=5000)
+#Directs user to the site (and debugs the site as well)
+app.run(debug=True, port=8000)

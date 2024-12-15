@@ -1,24 +1,20 @@
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
 def GetDB():
-
-    db = sqlite3.connect(".database/rookie.db")
+    db = sqlite3.connect("database/username.db")
     db.row_factory = sqlite3.Row
 
     return db
 
 def GetAllReviews():
-
     db = GetDB()
-    reviews = db.execute("""SELECT Guesses.date, Guesses.game, Guesses.score, Users.username
-                        FROM Guesses JOIN Users ON Guesses.user_id = Users.id 
+    reviews = db.execute("""SELECT Reviews.date, Reviews.moviegame, Reviews.score, Users.username
+                        FROM Reviews JOIN Users ON Reviews.user_id = Users.id 
                         ORDER BY date DESC""").fetchall()
-
     db.close()
     return reviews
-
+    
 def CheckLogin(username, password):
 
     db = GetDB()
@@ -39,7 +35,7 @@ def RegisterUser(username, password):
     if username is None or password is None:
         return False
     
-    db = GetDb()
+    db = GetDB()
     hash = generate_password_hash(password)
     db.execute("INSERT INTO Users(username, password) VALUES(?, ?)", (username, hash,))
     db.commit()

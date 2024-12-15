@@ -1,6 +1,6 @@
 @import
 url("https://fonts.googleapis.com/css?faily=Nunito:400,700&display=swap");
-/*Design for overall pages*/
+/*Design for overall pages (constant throughout the PWA*/
 * {
     padding: 0;
     margin: 0;
@@ -33,10 +33,10 @@ nav {
     background-color: #cea017;
     text-align: center;
 }
-
+/*Button 1*/
 nav a {
     display: inline-block;
-    color: #cea017;
+    color: #f6f3e9;
 
     padding: 14px 16px;
     text-decoration: none;
@@ -45,11 +45,11 @@ nav a {
 
 nav a:hover {
     background-color: #ddd;
-    color: black;
+    color: white;
 }
 
 nav a.active {
-    background-color:#8B0000;
+    background-color:#f2f2f2;
     color: white;
 }
 
@@ -66,9 +66,9 @@ nav a.active {
     padding: 8px;
 }
 
-.my_table tr:nth-child(even){background-color: #f2f2f2;}
+.my_table tr:nth-child(even){background-color: #54b7c6;}
 
-.my_table tr:hover {background-color: #ddd;}
+.my_table tr:hover {background-color: #4abf2a;}
 
 .my_table th {
     padding-top: 12px;
@@ -102,11 +102,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #7B0323;
+    background-color: #ffffff;
 }
 /*Button Design*/
 button {
-    background-color: #8B0000;
+    background-color: #ac9722;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
