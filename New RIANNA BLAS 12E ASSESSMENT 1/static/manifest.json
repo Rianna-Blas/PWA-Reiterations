@@ -1,0 +1,10 @@
+{
+    "name": "Movie/Game Reviews For Dummies",
+    "short_name": "MGGRFD",
+    "start_url": "/",
+    "display": "standalone",
+    "background_colour": "#8B0000",
+    "theme_color": "#fdfdfd",
+    "orientation": "landscape-primary"
+}
+

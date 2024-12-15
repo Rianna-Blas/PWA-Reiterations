@@ -15,19 +15,30 @@
 
 <body>
 
-        <h1 classs="banner">Movie/Game Reviews For Dummies</h1>
+        <h1 class="banner">Movie/Game Reviews For Dummies</h1>
 
         <nav>
             <a href="/">Home</a>
+
+
+
+        {% if not session['username'] %}
             <a href="/login">Login</a>
             <a href="/register">Register</a>
+        {% else %}
+            <a href="/logout">Logout</a>
+        {% endif %}
+
+
+
         </nav>
+    
 
         <main>
-            {& block content %}
+            
+        {% block content %}
 
-            {% endblock %}
-        </main>
+        {% endblock %}
 
         <script scr="static/js/app.js"></script>
 </body>

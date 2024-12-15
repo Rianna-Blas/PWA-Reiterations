@@ -1,7 +1,7 @@
 @import
 url("https://fonts.googleapis.com/css?faily=Nunito:400,700&display=swap");
-
-*{
+/*Design for overall pages*/
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,16 +27,16 @@ main{
     color: white;
     font-size: 3em;
 }
-
+/*Design for navigation bars*/
 nav {
     overflow: hidden;
-    background-color:  #cea017;
+    background-color: #cea017;
     text-align: center;
 }
 
 nav a {
     display: inline-block;
-    color: #f2f2f2;
+    color: #cea017;
 
     padding: 14px 16px;
     text-decoration: none;
@@ -49,12 +49,12 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color:  #04AA6D;
+    background-color:#8B0000;
     color: white;
 }
 
 
-
+/*Table Design*/
 .my_table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -74,11 +74,12 @@ nav a.active {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #1abc9c;
+    background-color: #8B0000;
     color: white;
 }
 
-input[type=text], input[type="password"], input[type="date"], input[type="number"], select {
+input[type=text], input[type="password"], input[type="date"], 
+input[type="number"], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -90,7 +91,7 @@ input[type=text], input[type="password"], input[type="date"], input[type="number
 
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #8B0000;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -103,7 +104,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #7B0323;
 }
-
+/*Button Design*/
 button {
     background-color: #8B0000;
     color: white;
