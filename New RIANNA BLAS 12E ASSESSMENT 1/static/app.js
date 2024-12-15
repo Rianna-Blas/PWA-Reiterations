@@ -1,3 +1,4 @@
+//Using a service worker
 if("serviceworker" in navigator) {
     window.addEventListener("load", function () {
         this.navigator.serviceWorker
